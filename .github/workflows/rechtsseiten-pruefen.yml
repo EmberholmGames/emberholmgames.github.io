@@ -1,0 +1,68 @@
+# Prüft jeden Morgen, ob alle Datenschutz-, Support- und Impressum-Seiten der Emberholm-Spiele erreichbar sind.
+# Liefert eine Adresse etwas anderes als 200, schlägt der Lauf fehl und GitHub schickt dem Konto eine Mail.
+# Neue Spiele: Adresse unten in URLS ergänzen. Von Hand starten: Actions → Rechtsseiten prüfen → Run workflow.
+name: Rechtsseiten prüfen
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pruefen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      URLS: |
+        https://emberholmgames.github.io/datenschutz.html
+        https://emberholmgames.github.io/impressum.html
+        https://emberholmgames.github.io/app-ads.txt
+        https://emberholmgames.github.io/showrunner/datenschutz-android.html
+        https://emberholmgames.github.io/showrunner/support.html
+        https://emberholmgames.github.io/homerundemolition/datenschutz-android.html
+        https://emberholmgames.github.io/homerundemolition/datenschutz-ios.html
+        https://emberholmgames.github.io/homerundemolition/datenschutz-web.html
+        https://emberholmgames.github.io/homerundemolition/support.html
+        https://emberholmgames.github.io/ember-paint-datenschutz/
+        https://emberholm.pages.dev/datenschutz.html
+        https://hartmannquentin4-eng.github.io/aquarius/datenschutz-android.html
+        https://hartmannquentin4-eng.github.io/aquarius/datenschutz-ios-admob.html
+        https://hartmannquentin4-eng.github.io/cloudherd/datenschutz-android.html
+        https://hartmannquentin4-eng.github.io/cloudherd/datenschutz-ios.html
+        https://hartmannquentin4-eng.github.io/restauratorin/datenschutz-android.html
+        https://hartmannquentin4-eng.github.io/restauratorin/datenschutz-ios-admob.html
+        https://hartmannquentin4-eng.github.io/fibwick/datenschutz-android.html
+        https://hartmannquentin4-eng.github.io/fibwick/datenschutz-ios-admob.html
+        https://hartmannquentin4-eng.github.io/foxandfabric/datenschutz-ios-admob.html
+        https://hartmannquentin4-eng.github.io/lightlag/datenschutz-android.html
+        https://hartmannquentin4-eng.github.io/lightlag/datenschutz-ios-admob.html
+        https://hartmannquentin4-eng.github.io/looplings/datenschutz-android.html
+        https://hartmannquentin4-eng.github.io/looplings/datenschutz-ios-admob.html
+        https://hartmannquentin4-eng.github.io/lowtide/datenschutz-android.html
+        https://hartmannquentin4-eng.github.io/nightbeam/datenschutz-android.html
+        https://hartmannquentin4-eng.github.io/nightbeam/datenschutz-ios-admob.html
+        https://hartmannquentin4-eng.github.io/purrista/datenschutz-android.html
+        https://hartmannquentin4-eng.github.io/purrista/datenschutz-ios-admob.html
+        https://hartmannquentin4-eng.github.io/signalbox/datenschutz-android.html
+    steps:
+      - name: Adressen abrufen
+        run: |
+          fehler=0
+          while read -r url; do
+            [ -z "$url" ] && continue
+            code=$(curl -sL -o /dev/null -w '%{http_code}' --retry 2 --retry-delay 10 --max-time 30 "$url" || echo 000)
+            if [ "$code" = "200" ]; then
+              echo "OK   $code  $url"
+            else
+              echo "::error::$url liefert $code"
+              fehler=$((fehler+1))
+            fi
+          done <<< "$URLS"
+          if [ "$fehler" -gt 0 ]; then
+            echo "$fehler Adresse(n) nicht erreichbar"
+            exit 1
+          fi
+          echo "Alle Seiten erreichbar"
