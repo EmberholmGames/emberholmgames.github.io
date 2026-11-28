@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- ENTWURF / DRAFT – vor der Veröffentlichung prüfen (lassen): Angaben zum Verantwortlichen, Knopf-Beschriftungen im Spiel, Werbe- und Kaufverhalten der fertigen App. Please review before release. -->
+<!-- Erzeugt mit tools/build-legal.js – nicht von Hand ändern. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="Help, contact and answers for the game Showrunner by Emberholm Games. Hilfe auf Deutsch weiter unten.">
+<title>Showrunner – Help & Support</title>
+<style>
+:root{
+  color-scheme:light dark;
+  --navy:#17132b;--yellow:#ffc93c;--red:#ee2240;
+  --bg:#f3eee0;--card:#fffaf0;--ink:#17132b;--quiet:#55506f;--rule:#d8cfb8;
+  --link:#b0122a;--cue-bg:#fff0bf;--cue-ink:#3a2c00;--chip:#17132b;--chip-ink:#ffc93c;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#17132b;--card:#201a3c;--ink:#f3eee0;--quiet:#b7b1cf;--rule:#3b3364;
+    --link:#ffc93c;--cue-bg:#2b2450;--cue-ink:#ffe08a;--chip:#ffc93c;--chip-ink:#17132b;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:17px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial,sans-serif;
+  overflow-wrap:break-word}
+a{color:var(--link);text-underline-offset:.18em}
+a:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.mast{background:var(--navy);color:#f3eee0}
+.bars{height:10px;background:linear-gradient(90deg,
+  #ffc93c 0 20%,#f3eee0 20% 36%,#ee2240 36% 56%,#7a6cf0 56% 72%,#2fb7a3 72% 86%,#ffc93c 86% 100%)}
+.mast-in,.wrap{max-width:44rem;margin:0 auto;padding-left:1.1rem;padding-right:1.1rem}
+.mast-in{padding-top:1.4rem;padding-bottom:1.5rem}
+.onair{display:inline-flex;align-items:center;gap:.5em;margin:0;padding:.2em .7em;border:2px solid var(--red);
+  border-radius:4px;color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.onair i{width:.6em;height:.6em;border-radius:50%;background:var(--red)}
+.mast h1{margin:.5rem 0 0;color:var(--yellow);font-size:clamp(2.1rem,9vw,3.2rem);line-height:1;
+  font-weight:900;letter-spacing:.02em;text-transform:uppercase;font-stretch:condensed}
+.mast .kicker{margin:.5rem 0 0;color:#cfc9e6;font-size:.95rem}
+.wrap{padding-top:1.2rem;padding-bottom:3rem}
+.lang{margin-top:2.2rem;padding-top:.4rem;border-top:4px double var(--rule)}
+.lang:first-child{margin-top:0;border-top:0}
+.lang>h2{margin:1rem 0 .2rem;font-size:1.7rem;line-height:1.2;font-weight:900}
+.lead{margin:.2rem 0 .9rem;color:var(--quiet)}
+.cuts{display:flex;flex-wrap:wrap;gap:.5rem;margin:0 0 1.2rem;padding:0;list-style:none}
+.cuts a{display:inline-block;padding:.45em .85em;min-height:2.6em;border:2px solid var(--ink);border-radius:999px;
+  color:var(--ink);font-size:.9rem;font-weight:700;text-decoration:none}
+.cuts a:hover{background:var(--yellow);border-color:var(--yellow);color:#17132b}
+.scene{margin:0 0 1rem;padding:1rem 1.05rem 1.05rem;background:var(--card);border:1px solid var(--rule);
+  border-left:6px solid var(--red);border-radius:6px}
+.scene h3{display:flex;align-items:flex-start;gap:.6rem;margin:0 0 .6rem;font-size:1.2rem;line-height:1.25;font-weight:800}
+.slate{flex:none;min-width:2.2em;padding:.12em .35em;border-radius:3px;background:var(--chip);color:var(--chip-ink);
+  font:700 .8em/1.5 ui-monospace,"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;text-align:center}
+.scene h4{margin:1.2rem 0 .3rem;font-size:.82rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--quiet)}
+.scene p{margin:.55rem 0}
+.scene ul{margin:.55rem 0;padding-left:1.25rem}
+.scene li{margin:.3rem 0}
+.scene li::marker{color:var(--red)}
+.cue{padding:.6rem .8rem;border-radius:4px;background:var(--cue-bg);color:var(--cue-ink);font-size:.93rem}
+.sheet{margin:.6rem 0;display:grid;grid-template-columns:minmax(5.5rem,auto) 1fr;gap:.25rem .9rem}
+.sheet dt{color:var(--quiet);font-size:.82rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding-top:.2em}
+.sheet dd{margin:0}
+.credits{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--quiet);font-size:.88rem}
+@media (max-width:22rem){.sheet{grid-template-columns:1fr}.scene{padding:.85rem .8rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{.mast{background:none;color:#000}.mast h1{color:#000}.bars,.cuts{display:none}.scene{break-inside:avoid;border-left-width:1px}}
+</style>
+</head>
+<body>
+<header class="mast">
+<div class="bars" aria-hidden="true"></div>
+<div class="mast-in">
+<p class="onair"><i aria-hidden="true"></i>Emberholm Games</p>
+<h1>Showrunner</h1>
+<p class="kicker">Help desk · Hilfe</p>
+</div>
+</header>
+<main class="wrap">
+<article class="lang" id="en">
+<h2>Help & Support</h2>
+<p class="lead">Trouble on set? Most answers are below. If yours is missing, write to us.</p>
+<ul class="cuts">
+  <li><a href="#de">Deutsch</a></li>
+  <li><a href="datenschutz-android.html#en">Privacy policy</a></li>
+  <li><a href="https://emberholmgames.github.io/impressum.html">Legal notice</a></li>
+</ul>
+
+<section class="scene" id="contact">
+<h3><span class="slate" aria-hidden="true">01</span><span>Reach the studio</span></h3>
+<p>E-mail: <a href="mailto:emberholmgames@gmail.com">emberholmgames@gmail.com</a></p>
+<p>We are a very small studio, so a reply can take a few days. It helps a lot if you tell us your phone model, your Android version, the language you play in and what you did just before the problem showed up. We answer in English or German.</p>
+</section>
+
+<section class="scene" id="saves">
+<h3><span class="slate" aria-hidden="true">02</span><span>How saving works</span></h3>
+<p>Showrunner saves by itself as you play. You have two save slots, so two careers can run side by side. The “More save slots” extra adds three more.</p>
+<p>Saves exist only on your device. There is no account and no cloud save, and nothing is sent to us. That also means a career does not move to another phone on its own. Whether Android’s own backup carries app data over to a new device depends on your Android settings and is outside our control.</p>
+</section>
+
+<section class="scene" id="lost-save">
+<h3><span class="slate" aria-hidden="true">03</span><span>My career is gone</span></h3>
+<p>First look at the other save slots – it is easy to open the wrong one.</p>
+<p>A save disappears when the app was uninstalled, when its storage was cleared in the Android settings, when the phone was reset, or when “New career” was started on that slot. Because saves never leave your device, we have no copy and cannot bring a career back. We are sorry; that is the price of a game without accounts.</p>
+<p>Your purchases from “Extras” are not lost – see the next answer. If the save vanished without any of the reasons above, please write to us with the details so we can look for a bug.</p>
+</section>
+
+<section class="scene" id="restore">
+<h3><span class="slate" aria-hidden="true">04</span><span>I bought something but it is not unlocked (or I still see ads)</span></h3>
+<p>Open Settings or “Extras” and tap “Restore purchases”. You need to be online and signed in to Google Play with the same Google account you bought with.</p>
+<p>After reinstalling the game or switching phones this step is always needed once. If it still does not work, send us the order number from your Google Play receipt (it starts with “GPA”).</p>
+</section>
+
+<section class="scene" id="settings">
+<h3><span class="slate" aria-hidden="true">05</span><span>Language, sound and text size</span></h3>
+<p>All of these are under Settings: the game language (German, English, Spanish, Brazilian Portuguese, French, Japanese, Korean), sound on or off, the text size and the speed. The game starts in your phone’s language if it is one of the seven; otherwise in English. Your choices are remembered on the device.</p>
+</section>
+
+<section class="scene" id="ads">
+<h3><span class="slate" aria-hidden="true">06</span><span>When ads appear</span></h3>
+<p>Showrunner is free and ads pay for it. A full-screen ad can appear between two seasons of a show – never in the middle of an episode, never during your first season, and only with a gap of at least four minutes. “Ad-free” is a one-time purchase that removes them; the “Producer pack” includes it.</p>
+</section>
+
+<section class="scene" id="ad-consent">
+<h3><span class="slate" aria-hidden="true">07</span><span>Changing my ad consent</span></h3>
+<p>Go to Settings → Change ad consent. Google’s consent dialog opens again and you can change or withdraw your choice. The entry appears only in countries where the dialog is required (EEA, UK, Switzerland). Elsewhere the game requests non-personalised ads only. Details are in the <a href="datenschutz-android.html#en">privacy policy</a>.</p>
+</section>
+
+<section class="scene" id="delete-data">
+<h3><span class="slate" aria-hidden="true">08</span><span>Deleting my data</span></h3>
+<ul>
+  <li>One career: on the main menu, select the slot and tap “New career” twice. That erases the save in that slot.</li>
+  <li>Everything: uninstall the app, or clear its storage in the Android settings (“Apps” → Showrunner → “Storage”).</li>
+  <li>Advertising data is held by Google. You can reset or delete your advertising ID in the Android settings and manage ad data at <a href="https://myadcenter.google.com">myadcenter.google.com</a>.</li>
+</ul>
+<p>We keep no game data on servers of our own, so there is nothing for us to delete on our side. If you still have a question or a request about your data, e-mail <a href="mailto:emberholmgames@gmail.com">emberholmgames@gmail.com</a>.</p>
+</section>
+
+<section class="scene" id="refund">
+<h3><span class="slate" aria-hidden="true">09</span><span>Refunds</span></h3>
+<p>Purchases are sold and billed by Google Play, so refunds are decided there, not by us. Google explains how to request one here: <a href="https://support.google.com/googleplay/answer/2479637">Google Play Help – refunds</a>.</p>
+</section>
+</article>
+
+<article class="lang" id="de" lang="de">
+<h2>Hilfe & Support</h2>
+<p class="lead">Panne am Set? Die meisten Antworten stehen hier. Fehlt deine, schreib uns.</p>
+<ul class="cuts">
+  <li><a href="#en">English</a></li>
+  <li><a href="datenschutz-android.html">Datenschutz</a></li>
+  <li><a href="https://emberholmgames.github.io/impressum.html">Impressum</a></li>
+</ul>
+
+<section class="scene" id="de-kontakt">
+<h3><span class="slate" aria-hidden="true">01</span><span>So erreichst du uns</span></h3>
+<p>E-Mail: <a href="mailto:emberholmgames@gmail.com">emberholmgames@gmail.com</a></p>
+<p>Wir sind ein sehr kleines Studio, eine Antwort kann daher ein paar Tage dauern. Es hilft sehr, wenn du dein Handy-Modell, deine Android-Version, die Spielsprache und das nennst, was du kurz vor dem Problem gemacht hast. Wir antworten auf Deutsch oder Englisch.</p>
+</section>
+
+<section class="scene" id="de-speichern">
+<h3><span class="slate" aria-hidden="true">02</span><span>So wird gespeichert</span></h3>
+<p>Showrunner speichert von selbst, während du spielst. Du hast zwei Speicherplätze, es können also zwei Karrieren nebeneinander laufen. Mit dem Extra „Mehr Speicherplätze“ kommen drei weitere dazu.</p>
+<p>Spielstände gibt es nur auf deinem Gerät. Es gibt kein Konto und keinen Cloud-Spielstand, und an uns wird nichts gesendet. Deshalb wandert eine Karriere auch nicht von allein auf ein anderes Handy. Ob die Android-Sicherung App-Daten auf ein neues Gerät mitnimmt, hängt von deinen Android-Einstellungen ab; darauf haben wir keinen Einfluss.</p>
+</section>
+
+<section class="scene" id="de-verloren">
+<h3><span class="slate" aria-hidden="true">03</span><span>Meine Karriere ist weg</span></h3>
+<p>Sieh zuerst in den anderen Speicherplätzen nach – man öffnet leicht den falschen.</p>
+<p>Ein Spielstand verschwindet, wenn die App deinstalliert wurde, wenn ihr Speicher in den Android-Einstellungen geleert wurde, wenn das Handy zurückgesetzt wurde oder wenn auf diesem Platz „Neue Karriere“ gestartet wurde. Weil Spielstände dein Gerät nie verlassen, haben wir keine Kopie und können eine Karriere nicht zurückholen. Das tut uns leid; es ist der Preis für ein Spiel ohne Konto.</p>
+<p>Deine Käufe aus den „Extras“ gehen dabei nicht verloren – siehe die nächste Antwort. Ist der Spielstand ohne einen der genannten Gründe verschwunden, schreib uns bitte mit allen Einzelheiten, damit wir nach einem Fehler suchen können.</p>
+</section>
+
+<section class="scene" id="de-kauf">
+<h3><span class="slate" aria-hidden="true">04</span><span>Etwas gekauft, aber es ist nicht freigeschaltet (oder es kommt noch Werbung)</span></h3>
+<p>Öffne die Einstellungen oder die „Extras“ und tippe auf „Käufe wiederherstellen“. Du musst online sein und bei Google Play mit demselben Google-Konto angemeldet sein, mit dem du gekauft hast.</p>
+<p>Nach einer Neuinstallation oder einem Handy-Wechsel ist dieser Schritt immer einmal nötig. Klappt es trotzdem nicht, schick uns die Bestellnummer aus deiner Google-Play-Quittung (sie beginnt mit „GPA“).</p>
+</section>
+
+<section class="scene" id="de-einstellungen">
+<h3><span class="slate" aria-hidden="true">05</span><span>Sprache, Ton und Textgröße</span></h3>
+<p>Alles steht in den Einstellungen: die Spielsprache (Deutsch, Englisch, Spanisch, brasilianisches Portugiesisch, Französisch, Japanisch, Koreanisch), Ton an oder aus, die Textgröße und das Tempo. Das Spiel startet in der Sprache deines Handys, wenn sie zu den sieben gehört, sonst auf Englisch. Deine Auswahl bleibt auf dem Gerät gespeichert.</p>
+</section>
+
+<section class="scene" id="de-werbung">
+<h3><span class="slate" aria-hidden="true">06</span><span>Wann Werbung kommt</span></h3>
+<p>Showrunner ist kostenlos und wird über Werbung bezahlt. Eine bildschirmfüllende Anzeige kann zwischen zwei Staffeln einer Serie laufen – nie mitten in einer Folge, nie in deiner ersten Staffel und nur mit mehreren Minuten Abstand. „Werbefrei“ ist ein einmaliger Kauf, der sie entfernt; das „Produzenten-Paket“ enthält ihn.</p>
+</section>
+
+<section class="scene" id="de-einwilligung">
+<h3><span class="slate" aria-hidden="true">07</span><span>Werbe-Einwilligung ändern</span></h3>
+<p>Geh zu Einstellungen → Werbe-Einwilligung ändern. Der Dialog von Google öffnet sich noch einmal, und du kannst deine Auswahl ändern oder zurückziehen. Der Eintrag erscheint nur in Ländern, in denen der Dialog vorgeschrieben ist (EWR, Vereinigtes Königreich, Schweiz). Anderswo fordert das Spiel nur nicht personalisierte Anzeigen an. Genaueres steht in der <a href="datenschutz-android.html">Datenschutzerklärung</a>.</p>
+</section>
+
+<section class="scene" id="de-loeschen">
+<h3><span class="slate" aria-hidden="true">08</span><span>Meine Daten löschen</span></h3>
+<ul>
+  <li>Eine Karriere: im Hauptmenü den Speicherplatz auswählen und zweimal auf „Neue Karriere“ tippen. Das löscht den Spielstand auf diesem Platz.</li>
+  <li>Alles: die App deinstallieren oder ihren Speicher in den Android-Einstellungen leeren („Apps“ → Showrunner → „Speicher“).</li>
+  <li>Werbedaten liegen bei Google. Die Werbe-ID kannst du in den Android-Einstellungen zurücksetzen oder löschen, Werbedaten verwaltest du unter <a href="https://myadcenter.google.com">myadcenter.google.com</a>.</li>
+</ul>
+<p>Wir speichern keine Spieldaten auf eigenen Servern, bei uns gibt es also nichts zu löschen. Hast du trotzdem eine Frage oder ein Anliegen zu deinen Daten, schreib an <a href="mailto:emberholmgames@gmail.com">emberholmgames@gmail.com</a>.</p>
+</section>
+
+<section class="scene" id="de-erstattung">
+<h3><span class="slate" aria-hidden="true">09</span><span>Geld zurück</span></h3>
+<p>Käufe verkauft und berechnet Google Play. Über Erstattungen entscheidet deshalb Google, nicht wir. Wie du eine beantragst, erklärt Google hier: <a href="https://support.google.com/googleplay/answer/2479637">Google-Play-Hilfe – Erstattungen</a>.</p>
+</section>
+</article>
+
+<p class="credits">© Emberholm Games · <a href="mailto:emberholmgames@gmail.com">emberholmgames@gmail.com</a> · <a href="https://emberholmgames.github.io/impressum.html">Impressum</a></p>
+</main>
+</body>
+</html>
